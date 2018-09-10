@@ -1,4 +1,10 @@
-package dakplusplus;
+/**
+ * The below class is just a lightweight data container with no behavior attached to it (feel free to judge me for
+ * committing this cardinal sin). The only detail worth to stress here is that in order to make it persistable for Hibernate (or any other JPA implementation) it’s been marked with an @Entity annotation. In addition, Hibernate needs to know how to handle the entities’ primary keys.
+ *
+ * To tackle this, the @Id and @GeneratedValue(strategy = GenerationType.AUTO) annotations instruct Hibernate to automatically generate an ID for each user entity, which will be mapped to the primary key of the corresponding database entry. Finally, the @Table(name = "users") annotation tells Hibernate to map instances of the class to rows in a users table.
+ */
+package entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,18 +14,18 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "employee")
+@Table(name = "EMPLOYEE")
 public class Employee {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "ID")
     private Integer id;
 
-    @Column(name = "name")
+    @Column(name = "NAME")
     private String name;
 
-    @Column(name = "age")
+    @Column(name = "AGE")
     private Integer age;
 
     public Employee() {
