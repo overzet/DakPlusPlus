@@ -8,8 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "dakplusplus")
-public class DakPlusPlus {
+@Table(name = "employee")
+public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,22 +19,23 @@ public class DakPlusPlus {
     @Column(name = "name")
     private String name;
 
-    @Column(name="contract_id")
-    private Integer contractId;
+    @Column(name = "age")
+    private Integer age;
 
-    public DakPlusPlus() {
+    public Employee() {
     }
 
-    public DakPlusPlus(Integer id, String name, Integer age) {
+    public Employee(Integer id, String name, Integer age) {
         this.id = id;
         this.name = name;
-        this.contractId = age;
+        this.age = age;
     }
 
-    public DakPlusPlus(String name, int age) {
+    public Employee(String name, int age) {
         this.name = name;
-        this.contractId = age;
+        this.age = age;
     }
+
     public Integer getId() {
         return id;
     }
@@ -51,17 +52,17 @@ public class DakPlusPlus {
         this.name = name;
     }
 
-    public Integer getContractId() {
-        return contractId;
+    public Integer getAge() {
+        return age;
     }
 
-    public void setContractId(Integer contractId) {
-        this.contractId = contractId;
+    public void setAge(Integer age) {
+        this.age = age;
     }
 
     @Override
     public String toString() {
-        return "Employee: " + this.id + ", " + this.name + ", " + this.contractId;
+        return "Employee: " + this.id + ", " + this.name + ", " + this.age;
     }
 
 }
