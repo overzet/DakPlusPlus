@@ -4,6 +4,9 @@ import entities.Employee;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
+import java.util.Collection;
+import java.util.List;
 
 public class EmployeeDao {
 
@@ -24,6 +27,11 @@ public class EmployeeDao {
 
     public Employee find(int id) {
         return entityManager.find(Employee.class, id);
+    }
+
+    public List<Employee> findAllEmployee() {
+        Query query = entityManager.createQuery("SELECT e FROM Employee e");
+        return (List<Employee>) query.getResultList();
     }
 
     public void update(int id, String name, int age) {

@@ -1,6 +1,9 @@
 package services;
 
 import daos.EmployeeDao;
+import entities.Employee;
+
+import java.util.List;
 
 public class EmployeeService {
 
@@ -10,5 +13,7 @@ public class EmployeeService {
         this.employeeDao = employeeDao;
     }
 
-
+    public List<Employee> getAllEmployees() {
+        return employeeDao.findAllEmployee();
+    }
 }

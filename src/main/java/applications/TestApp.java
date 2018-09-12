@@ -21,10 +21,12 @@ public class TestApp {
         EmployeeService employeeService = new EmployeeService(employeeDao);
 
 
-        Employee employee = employeeDao.find(24);
 
 
-        System.out.println(employee);
+
+        System.out.println(employeeService.getAllEmployees());
+        entityManager.close();
+        entityManagerFactory.close();
     }
 
 }
