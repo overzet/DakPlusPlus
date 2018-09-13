@@ -5,7 +5,6 @@ import entities.Employee;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
-import java.util.Collection;
 import java.util.List;
 
 public class EmployeeDao {

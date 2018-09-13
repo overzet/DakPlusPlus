@@ -21,10 +21,9 @@ public class TestApp {
         EmployeeService employeeService = new EmployeeService(employeeDao);
 
 
+        System.out.println(employeeService.getAllEmployees()); //WhooHoo it works!
 
 
-
-        System.out.println(employeeService.getAllEmployees());
         entityManager.close();
         entityManagerFactory.close();
     }
