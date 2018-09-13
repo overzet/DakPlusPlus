@@ -1,3 +1,8 @@
+/**
+ * a DAO class will encapsulate the handling of the entity manager and the entity transaction behind the
+ * fences of a declarative API.
+ */
+
 package daos;
 
 import entities.Employee;
