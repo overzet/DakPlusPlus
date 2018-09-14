@@ -1,3 +1,10 @@
+/**
+ * @author JOverzet
+ * @version 3.25
+ *
+ * Class to present the user with an option list
+ */
+
 package applications;
 
 import daos.EmployeeDao;

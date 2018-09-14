@@ -1,4 +1,7 @@
 /**
+ * @author JOverzet
+ * @version 3.25
+ **
  * a DAO class will encapsulate the handling of the entity manager and the entity transaction behind the
  * fences of a declarative API.
  */

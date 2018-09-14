@@ -1,3 +1,10 @@
+/**
+ * @author JOverzet
+ * @version 3.25
+ *
+ * This entity class is essentially an object wrapper for a database table.
+ * The attributes of an entity are transformed to columns on the database table.
+ */
 package entities;
 
 import javax.persistence.Column;

@@ -1,3 +1,11 @@
+/**
+ * @author JOverzet
+ * @version 3.25
+ *
+ * This service class handles requests from a user,
+ * encapsulating business logic and persistence away from the action being taken.
+ */
+
 package services;
 
 import daos.EmployeeDao;
